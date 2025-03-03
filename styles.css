@@ -14,6 +14,7 @@ html {
     scrollbar-width: thin;
     scrollbar-color: var(--color-header) var(--color-fondo); /* Colores de la barra de desplazamiento */
     scroll-padding-top: 2rem;
+    overflow-x: hidden;
 }
 
 body {
@@ -331,4 +332,124 @@ footer {
 .footer-logo img {
     height: 3rem;
     border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    /* Prevención del desplazamiento horizontal */
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Evita el desplazamiento horizontal */
+        margin: 0;
+        padding: 0;
+    }
+    
+/* Header con solo el logo visible */
+header {
+    background-color: #ffffff;
+    padding: 2rem 0; /* Ajusta el padding solo en la parte superior e inferior */
+    text-align: center;
+    height: auto; /* Deja que el contenido ajuste el tamaño del header */
+}
+
+/* Hacer el texto invisible pero mantenerlo en el código */
+header .header-text {
+    visibility: hidden; /* El texto sigue presente en el HTML pero es invisible */
+    font-size: 0; /* Asegura que el texto no ocupe espacio visualmente */
+}
+
+/* Centrar el logo en el header */
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Asegura que el logo ocupe el 100% del ancho del header */
+    height: auto; /* Ajusta la altura automáticamente */
+}
+
+header .logo img {
+    height: 6rem; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantén la relación de aspecto del logo */
+
+}
+
+
+    
+    /* Ajuste del texto */
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 1.5rem; /* Tamaño de texto reducido para todos los títulos */
+        line-height: 1.2;
+    }
+    
+    p, ul, li {
+        font-size: 0.9rem; /* Reducción del tamaño de los textos */
+        line-height: 1.5;
+    }
+    
+    /* Ajustes para que todo se mantenga en pantalla sin necesidad de desplazarse horizontalmente */
+    .hero, #menu, #reservas, #pedidos, footer {
+        width: 100%;
+        overflow: hidden; /* Evita desbordamientos horizontales */
+        padding: 1rem 20px; /* Ajusta el padding */
+    }
+    
+    /* Ajuste de la sección Hero */
+    .hero {
+        text-align: center;
+        padding: 3rem 20px;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem; /* Reduce el tamaño de los títulos */
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    /* Botones más pequeños */
+    .btn, .btn.secondary {
+        font-size: 0.8rem; /* Tamaño de botón más pequeño */
+        padding: 6px 12px;
+    }
+    
+    /* Menú más pequeño */
+    #menu h2 {
+        font-size: 1.8rem;
+    }
+    
+    #menu p {
+        font-size: 1rem;
+    }
+    
+    #menu ul {
+        font-size: 0.9rem;
+    }
+    
+    /* Mapa */
+    .mapa-contenedor iframe {
+        width: 100%;
+        height: 200px; /* Reduce el tamaño del mapa */
+    }
+    
+    /* Ajustes en la galería */
+    .imagenes-galeria {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .imagenes-galeria img {
+        width: 90%;
+        max-width: 240px;
+    }
+    
+    /* Pie de página */
+    footer {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    footer .footer-logo img {
+        height: 4rem;
+    }
+    
 }
