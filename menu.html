@@ -1,0 +1,1436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiyomi - Menu</title>
+    <link rel="icon" href="Images/Logo/IconoKiyomi.png" type="image/png" class="pruebaimg">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="sticky-nav-container">
+        <!-- Navbar superior para sesión y cesta -->
+        <nav class="top-navbar">
+            <!-- Botón del menú hamburguesa -->
+            <button class="menu-btn" id="menu-toggle">☰</button>
+    
+            <!-- Contenedor centrado para el logo y nombre -->
+            <div class="logo-center">
+                <h1>Kiyomi</h1>
+            </div>
+    
+            <!-- Contenedor con los enlaces a la derecha -->
+            <div class="top-nav-links">
+                <div class="btn-inicio">
+                    <button class="nav-btn sign-in"><a href="#">Sign In</a></button>
+                    <button class="nav-btn sign-up"><a href="#">Sign Up</a></button>                    
+                </div>
+                <button class="nav-btn carrito">                
+                    <a href="#" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span> <!-- Número de artículos en el carrito -->
+                    </a>
+                </button>
+            </div>
+        </nav>
+    
+        <nav id="navbar" class="main-nav">
+            <!-- Contenedor con los enlaces -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#entrantes">Entrantes</a></li>
+                <li class="dropdown">
+                    <a href="#platos-fritos">Platos</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#platos-fritos">Platos Fritos</a></li>
+                        <li><a href="#platos-calientes">Platos Calientes</a></li>
+                        <li><a href="#plancha">Plancha</a></li>
+                    </ul>
+                </li>
+                <li><a href="#sushis">Sushis</a></li>
+                <li><a href="#makis">Makis</a></li>
+                <li><a href="#postres">Postres</a></li>
+                <li class="dropdown">
+                    <a href="#bebidas">Bebidas</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#cafes">Cafés</a></li>
+                        <li><a href="#sangrias-cavas">Sangría y Cavas</a></li>
+                        <li><a href="#vinos">Vinos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        
+    </div>         
+
+
+    <header class="header-menu">
+        <h1>Kiyomi</h1>
+        <div class="logo-menu">
+            <img src="Images/Logo/LogoKiyomi.png" alt="Kiyomi - Restaurante Japonés">
+        </div>
+    </header>
+
+    <div class="container main">
+
+        <!-- 1- Entrantes -->
+        <section id="entrantes" class="menu-section">
+            <h2>1- Entrantes</h2>
+            <div class="menu-table">
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/1_SopaMiso.png" title="Sopa de Miso" alt="Sopa De Miso" class="menu-item-img">
+                    <h3>1 · Sopa De Miso</h3>
+                    <p>Tradicional sopa japonesa con tofu, algas y cebolleta.</p>
+                    <span>Precio: 3,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/2_SopaAgridulce.png" title="Sopa Agridulce" alt="Sopa Agridulce" class="menu-item-img">
+                    <h3>2 · Sopa Agridulce</h3>
+                    <p>Una sopa deliciosa con un toque dulce y ácido.</p>
+                    <span>Precio: 3,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/3_P.png" title="P" alt="P" class="menu-item-img">
+                    <h3>3 · P</h3>
+                    <p>Descripción pendiente.</p>
+                    <span>Precio: 5,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/5_EnsaladaWakame.png" title="Ensalada de Wakame" alt="Ensalada de Wakame" class="menu-item-img">
+                    <h3>5 · Ensalada Wakame</h3>
+                    <p>Ensalada de algas marinas con sésamo.</p>
+                    <span>Precio: 5,75 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/6_EnsaladaVariada.png" title="Ensalada Variada" alt="Ensalada Variada" class="menu-item-img">
+                    <h3>6 · Ensalada Variada</h3>
+                    <p>Ensalada fresca con verduras variadas.</p>
+                    <span>Precio: 4,85 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/7_EnsaladaPepinoAlgas.png" title="Ensalada de Pepino y Algas" alt="Ensalada de Pepino y Algas" class="menu-item-img">
+                    <h3>7 · Ensalada De Pepino y Algas</h3>
+                    <p>Ensalada fresca con pepino, algas y sésamo.</p>
+                    <span>Precio: 6,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/8_Edamame.png" title="Edamame" alt="Edamame" class="menu-item-img">
+                    <h3>8 · Edamame</h3>
+                    <p>Frijoles de soja al vapor.</p>
+                    <span>Precio: 4,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/9_EnsaladaMarisco.png" title="Ensalada de Marisco" alt="Ensalada de Marisco" class="menu-item-img">
+                    <h3>9 · Ensalada De Marisco</h3>
+                    <p>Ensalada con mariscos frescos.</p>
+                    <span>Precio: 6,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/10_AtunTataki.png" title="Atún Tataki" alt="Atún Tataki" class="menu-item-img">
+                    <h3>10 · Atún Tataki</h3>
+                    <p>Atún marinado, sellado y servido con salsa.</p>
+                    <span>Precio: 12,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/11_SalmonTataki.png" title="Salmón Tataki" alt="Salmón Tataki" class="menu-item-img">
+                    <h3>11 · Salmón Tataki</h3>
+                    <p>Salmón marinado y ligeramente sellado.</p>
+                    <span>Precio: 11,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/18_BolaPulpoSalsaTeriyaki.png" title="Bola de Pulpo con Salsa Teriyaki" alt="Bola de Pulpo con Salsa Teriyaki" class="menu-item-img">
+                    <h3>18 · Bola De Pulpo con Salsa Teriyaki</h3>
+                    <p>Deliciosa bola de pulpo acompañada de salsa Teriyaki.</p>
+                    <span>Precio: 7,25 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/23_BanyaCurriFrito.png" title="Banya de Curri Frito" alt="Banya de Curri Frito" class="menu-item-img">
+                    <h3>23 · Banya De Curri Frito</h3>
+                    <p>Plato de curri frito muy sabroso.</p>
+                    <span>Precio: 5,70 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="" alt="Imagen no disponible" class="menu-item-img">
+                    <h3>31 · Pollo Rebozado con Limón</h3>
+                    <p>Pollo rebozado con un toque de limón fresco.</p>
+                    <span>Precio: 7,75 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/32_RejosFritos.png" title="Rejos Fritos" alt="Rejos Fritos" class="menu-item-img">
+                    <h3>32 · Rejos Fritos</h3>
+                    <p>Deliciosos rejos fritos al estilo japonés.</p>
+                    <span>Precio: 7,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/33_GambasPicantes.png" title="Gambas Picantes" alt="Gambas Picantes" class="menu-item-img">
+                    <h3>33 · Gambas Picantes</h3>
+                    <p>Gambas picantes con un toque de especias.</p>
+                    <span>Precio: 9,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/36_BolasFritas.png" title="Bolas Fritas" alt="Bolas Fritas" class="menu-item-img">
+                    <h3>36 · Bolas Fritas</h3>
+                    <p>Bolas Fritas con una textura crujiente.</p>
+                    <span>Precio: 6,45 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/40_PolloConAvellanas.png" title="Pollo con Almendras" alt="Pollo con Almendras" class="menu-item-img">
+                    <h3>40 · Pollo con Almendras</h3>
+                    <p>Pollo con almendras, una combinación perfecta.</p>
+                    <span>Precio: 6,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/42_TerneraConBambu.png" title="Ternera con Bambú" alt="Ternera con Bambú" class="menu-item-img">
+                    <h3>42 · Ternera con Bambú</h3>
+                    <p>Carne de ternera acompañada de bambú.</p>
+                    <span>Precio: 6,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/43_PolloConBambuYChampiñon.png" title="Pollo con Bambú y Champiñón" alt="Pollo con Bambú y Champiñón" class="menu-item-img">
+                    <h3>43 · Pollo con Bambú y Champiñón</h3>
+                    <p>Pollo con bambú y boletus.</p>
+                    <span>Precio: 6,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/44_PolloAlCurry.png" title="Pollo al Curry" alt="Pollo al Curry" class="menu-item-img">
+                    <h3>44 · Pollo al Curry</h3>
+                    <p>Pollo en curry con especias delicadas.</p>
+                    <span>Precio: 5,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/50_FideosdeArrozConVerduras.png" title="Fideos de Arroz con Verduras" alt="Fideos de Arroz con Verduras" class="menu-item-img">
+                    <h3>50 · Fideos de Arroz con Verduras</h3>
+                    <p>Fideos de arroz con verduras frescas.</p>
+                    <span>Precio: 6,65 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/53_Arroz3delicias.png" title="Arroz tres delicias" alt="Arroz tres delicias" class="menu-item-img">
+                    <h3>53 · Arroz Tres Delicias</h3>
+                    <p>Arroz con tres deliciosos ingredientes.</p>
+                    <span>Precio: 6,45 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="" alt="Imagen no disponible" class="menu-item-img">
+                    <h3>55 · Donburi De Pollo con Salsa Teriyaki</h3>
+                    <p>Donburi de pollo con una deliciosa salsa Teriyaki.</p>
+                    <span>Precio: 7,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/60_TerneraEnrrollada.png" title="Ternera Enrollada" alt="Ternera Enrollada" class="menu-item-img">
+                    <h3>60 · Ternera Enrollada</h3>
+                    <p>Ternera enrollada con un toque especial.</p>
+                    <span>Precio: 7,45 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/62_PolloPlancha.png" title="Pollo a la Plancha" alt="Pollo a la Plancha" class="menu-item-img">
+                    <h3>62 · Pollo a la Plancha</h3>
+                    <p>Pollo a la plancha con un sabor delicioso.</p>
+                    <span>Precio: 7,75 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="" alt="Imagen no disponible" class="menu-item-img">
+                    <h3>69 · Ostras</h3>
+                    <p>Ostras frescas servidas al gusto.</p>
+                    <span>Precio: 8,25 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/82_GunkaAtun.png" title="Gunka de Atún" alt="Gunka de Atún" class="menu-item-img">
+                    <h3>82 · Gunka de Atún</h3>
+                    <p>Arroz con atún fresco y una deliciosa salsa.</p>
+                    <span>Precio: 4,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/95_TartarSalmonAguacate.png" title="Tartar de Salmón y Aguacate" alt="Tartar de Salmón con Aguacate" class="menu-item-img">
+                    <h3>95 · Tartar de Salmón y Aguacate</h3>
+                    <p>Un delicioso tartar de salmón con aguacate.</p>
+                    <span>Precio: 9,55 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Entrantes/130_UramakiTokyo.png" title="Uramaki Tokyo" alt="Uramaki Tokyo" class="menu-item-img">
+                    <h3>130 · Uramaki Tokyo</h3>
+                    <p>Sushi Uramaki con sabores exclusivos.</p>
+                    <span>Precio: 8,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2- Platos Fritos -->
+        <section id="platos-fritos" class="menu-section">
+            <h2>2- Platos Fritos</h2>
+            <div class="menu-table">
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/16_CostillaCerdo.png" title="Costilla De Cerdo" alt="Costilla De Cerdo" class="menu-item-img">
+                    <h3>16 · Costilla De Cerdo</h3>
+                    <p>Deliciosas costillas de cerdo cocinadas a la perfección.</p>
+                    <span>Precio: 7,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/17_CerdoParrilla.png" title="Cerdo A La Parrilla" alt="Cerdo A La Parrilla" class="menu-item-img">
+                    <h3>17 · Cerdo A La Parrilla</h3>
+                    <p>Cerdo jugoso asado a la parrilla con especias.</p>
+                    <span>Precio: 7,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/19_RollitoPrimavera.png" title="Rollito De Primavera" alt="Rollito De Primavera" class="menu-item-img">
+                    <h3>19 · Rollito De Primavera</h3>
+                    <p>Crujiente rollito de primavera relleno de verduras frescas.</p>
+                    <span>Precio: 6,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/20_PanEspinacas.png" title="Pan De Espinacas" alt="Pan De Espinacas" class="menu-item-img">
+                    <h3>20 · Pan De Espinacas</h3>
+                    <p>Pan esponjoso con espinacas frescas.</p>
+                    <span>Precio: 4,70 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/21_GambasTempura.png" title="Gambas De Tempura" alt="Gambas De Tempura" class="menu-item-img">
+                    <h3>21 · Gambas De Tempura</h3>
+                    <p>Gambas rebozadas en tempura crujiente.</p>
+                    <span>Precio: 7,65 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/25_PatoFrito.png" title="Pato Frito" alt="Pato Frito" class="menu-item-img">
+                    <h3>25 · Pato Frito</h3>
+                    <p>Pato frito crujiente con un toque especial.</p>
+                    <span>Precio: 10,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/26_EnrolladoCerdoQueso.png" title="Enrollado De Cerdo Queso" alt="Enrollado De Cerdo Queso" class="menu-item-img">
+                    <h3>26 · Enrollado De Cerdo Queso</h3>
+                    <p>Delicioso enrollado de cerdo con queso fundido.</p>
+                    <span>Precio: 7,65 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/28_GambasTempuraAlmidon.png" title="Gambas Tempura Almidon" alt="Gambas Tempura Almidon" class="menu-item-img">
+                    <h3>28 · Gambas Tempura Almidon</h3>
+                    <p>Gambas en tempura de almidón, crujientes y sabrosas.</p>
+                    <span>Precio: 8,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/29_VerdurasTempura.png" title="Verduras Tempura" alt="Verduras Tempura" class="menu-item-img">
+                    <h3>29 · Verduras Tempura</h3>
+                    <p>Verduras variadas en tempura ligera.</p>
+                    <span>Precio: 7,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoFrito/30_PolloRebozado.png" title="Pollo Rebozado" alt="Pollo Rebozado" class="menu-item-img">
+                    <h3>30 · Pollo Rebozado</h3>
+                    <p>Pollo tierno rebozado y crujiente.</p>
+                    <span>Precio: 7,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+            </div> 
+        </section>
+
+        <!-- 3- Platos Calientes -->
+        <section id="platos-calientes" class="menu-section">
+            <h2>3 - Platos Calientes</h2>
+            <div class="menu-table">
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/27_PolloRebozado.png" title="Pollo Empanado" alt="Pollo Empanado" class="menu-item-img">
+                    <h3>27 · Pollo Empanado</h3>
+                    <p>Pollo empanado con un toque especial.</p>
+                    <span>Precio: 6,60 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/35_Shumai.png" title="Shumai" alt="Shumai" class="menu-item-img">
+                    <h3>35 · Shumai</h3>
+                    <p>Deliciosos dumplings al vapor.</p>
+                    <span>Precio: 6,75 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/37_Gyoza.png" title="Gyoza" alt="Gyoza" class="menu-item-img">
+                    <h3>37 · Gyoza</h3>
+                    <p>Empanadillas japonesas rellenas.</p>
+                    <span>Precio: 6,15 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/38_GambasConVerduras.png" title="Gambas Con Verduras" alt="Gambas Con Verduras" class="menu-item-img">
+                    <h3>38 · Gambas Con Verduras</h3>
+                    <p>Gambas salteadas con verduras frescas.</p>
+                    <span>Precio: 8,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/39_TerneraTrocitos.png" title="Ternera En Trocitos" alt="Ternera En Trocitos" class="menu-item-img">
+                    <h3>39 · Ternera En Trocitos</h3>
+                    <p>Tierna ternera cortada en trozos pequeños.</p>
+                    <span>Precio: 9,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/41_GambasFritasSalPim.png" title="Gambas Fritas Sal Pimienta" alt="Gambas Fritas Sal Pimienta" class="menu-item-img">
+                    <h3>41 · Gambas Fritas Sal Pimienta</h3>
+                    <p>Gambas fritas con sal y pimienta.</p>
+                    <span>Precio: 9,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/45_PolloDulcePicante.png" title="Pollo Dulce y Picante" alt="Pollo Dulce y Picante" class="menu-item-img">
+                    <h3>45 · Pollo Dulce y Picante</h3>
+                    <p>Pollo con salsa dulce y picante.</p>
+                    <span>Precio: 7,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/46_YakiSobaConMarisco.png" title="Yaki Soba Con Mariscos" alt="Yaki Soba Con Mariscos" class="menu-item-img">
+                    <h3>46 · Yaki Soba Con Mariscos</h3>
+                    <p>Fideos japoneses con mariscos.</p>
+                    <span>Precio: 6,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/47_YakisobaConTernera.png" title="Yaki Soba Con Ternera" alt="Yaki Soba Con Ternera" class="menu-item-img">
+                    <h3>47 · Yaki Soba Con Ternera</h3>
+                    <p>Fideos japoneses con ternera.</p>
+                    <span>Precio: 6,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/49_UdonConTernera.png" title="Udon Con Ternera" alt="Udon Con Ternera" class="menu-item-img">
+                    <h3>49 · Udon Con Ternera</h3>
+                    <p>Fideos udon con ternera.</p>
+                    <span>Precio: 6,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/51_SobaTallarinesConTernera.png" title="Soba De Tallarines Con Ternera" alt="Soba De Tallarines Con Ternera" class="menu-item-img">
+                    <h3>51 · Soba De Tallarines Con Ternera</h3>
+                    <p>Tallarines soba con ternera.</p>
+                    <span>Precio: 6,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/54_ArrozFritoConPollo.png" title="Arroz Frito Con Pollo" alt="Arroz Frito Con Pollo" class="menu-item-img">
+                    <h3>54 · Arroz Frito Con Pollo</h3>
+                    <p>Arroz frito acompañado de pollo.</p>
+                    <span>Precio: 6,55 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/56_ArrozBlancoConCurry.png" title="Arroz Blanco Con Curry" alt="Arroz Blanco Con Curry" class="menu-item-img">
+                    <h3>56 · Arroz Blanco Con Curry</h3>
+                    <p>Arroz blanco con salsa de curry.</p>
+                    <span>Precio: 6,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/72_SipiaPlancha.png" title="Sepia a la Plancha" alt="Sepia a la Plancha" class="menu-item-img">
+                    <h3>72 · Sepia a la Plancha</h3>
+                    <p>Sepia a la plancha con aliño especial.</p>
+                    <span>Precio: 8,85 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/137_UramakiFuji.png" title="Uramaki Fuji" alt="Uramaki Fuji" class="menu-item-img">
+                    <h3>137 · Uramaki Fuji</h3>
+                    <p>Rollo de sushi invertido con ingredientes frescos.</p>
+                    <span>Precio: 6,85 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/144_UramakiPinattsu.png" title="Uramaki Pinattsu" alt="Uramaki Pinattsu" class="menu-item-img">
+                    <h3>144 · Uramaki Pinattsu</h3>
+                    <p>Rollo de sushi con un toque especial.</p>
+                    <span>Precio: 6,85 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 - Plancha -->
+        <section id="plancha" class="menu-section">
+            <h2>4 - Plancha</h2>
+            <div class="menu-table">
+                <div class="menu-item">
+                    <img src="Images/Comida/Plancha/61_PinchoSetas.png" title="Pincho De Setas" alt="Pincho De Setas" class="menu-item-img">
+                    <h3>61 · Pincho De Setas</h3>
+                    <p>Pincho de setas a la plancha.</p>
+                    <span>Precio: 5,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Plancha/63_PinchoPollo.png" title="Pincho De Pollo" alt="Pincho De Pollo" class="menu-item-img">
+                    <h3>63 · Pincho De Pollo</h3>
+                    <p>Pincho de pollo a la plancha.</p>
+                    <span>Precio: 5,10 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Plancha/64_PinchoTernera.png" title="Pincho De Ternera Queso" alt="Pincho De Ternera Queso" class="menu-item-img">
+                    <h3>64 · Pincho De Ternera Queso</h3>
+                    <p>Pincho de ternera con queso a la plancha.</p>
+                    <span>Precio: 6,35 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Plancha/66_PinchoGamba.png" title="Pincho De Gamba" alt="Pincho De Gamba" class="menu-item-img">
+                    <h3>66 · Pincho De Gamba</h3>
+                    <p>Pincho de gambas a la plancha.</p>
+                    <span>Precio: 5,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Plancha/67_GambaPlancha.png" title="Gamba A La Plancha" alt="Gamba A La Plancha" class="menu-item-img">
+                    <h3>67 · Gamba A La Plancha</h3>
+                    <p>Gamba a la plancha.</p>
+                    <span>Precio: 6,85 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Plancha/68_NavajasPlancha.png" title="Navajas A La Plancha" alt="Navajas A La Plancha" class="menu-item-img">
+                    <h3>68 · Navajas A La Plancha</h3>
+                    <p>Navajas a la plancha con un toque especial.</p>
+                    <span>Precio: 7,20 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Plancha/70_Almeja.png" title="Almeja" alt="Almeja" class="menu-item-img">
+                    <h3>70 · Almeja</h3>
+                    <p>Almejas a la plancha.</p>
+                    <span>Precio: 8,59 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Plancha/73_SalmonPlancha.png" title="Salmon A La Plancha" alt="Salmon A La Plancha" class="menu-item-img">
+                    <h3>73 · Salmon Plancha</h3>
+                    <p>Salmon a la plancha con un toque especial.</p>
+                    <span>Precio: 7,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5 - Sushis -->
+        <section id="sushis" class="menu-section">
+            <h2>5 - Sushis</h2>
+            <div class="menu-table">
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/86_NigiriAtun.png" title="Nigiri de Atún" alt="Nigiri de Atún" class="menu-item-img">
+                    <h3>86 · Nigiri Atún</h3>
+                    <p>Delicioso nigiri de atún.</p>
+                    <span>Precio: 4,65 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/87_NigiriSalmon.png" title="Nigiri de Salmon" alt="Nigiri de Salmon" class="menu-item-img">
+                    <h3>87 · Nigiri Salmón</h3>
+                    <p>Tradicional nigiri de salmón.</p>
+                    <span>Precio: 4,60 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/88_NigiriSalmonFlameado.png" title="Nigiri de Salmon Flameado" alt="Nigiri de Salmon Flameado" class="menu-item-img">
+                    <h3>88 · Nigiri Salmón Flameado</h3>
+                    <p>Nigiri de salmón ligeramente flameado.</p>
+                    <span>Precio: 4,85 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/89_NigiriPezMantequilla.png" title="Niguiri de Pez Mantequilla" alt="Niguiri de Pez Mantequilla" class="menu-item-img">
+                    <h3>89 · Nigiri de Pez Mantequilla</h3>
+                    <p>Nigiri de pez mantequilla.</p>
+                    <span>Precio: 4,65 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/90_NigiriAngila.png" title="Nigiri de Anguila" alt="Nigiri de Anguila" class="menu-item-img">
+                    <h3>90 · Nigiri Anguila</h3>
+                    <p>Nigiri de anguila a la parrilla.</p>
+                    <span>Precio: 4,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/91_NigiriGambasAguacate.png" title="Nigiri de Gambas con Aguacate" alt="Nigiri de Gambas con Aguacate" class="menu-item-img">
+                    <h3>91 · Nigiri Gambas con Aguacate</h3>
+                    <p>Nigiri con gambas y aguacate.</p>
+                    <span>Precio: 4,15 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/149_SashamiSalmon.png" title="Sashimi de Salmón" alt="Sashimi de Salmón" class="menu-item-img">
+                    <h3>149 · Sashimi Salmón</h3>
+                    <p>Sashimi de salmón fresco.</p>
+                    <span>Precio: 12,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/150_SashamiAtun.png" title="Sashimi de Atún" alt="Sashimi de Atún" class="menu-item-img">
+                    <h3>150 · Sashimi Atún</h3>
+                    <p>Sashimi de atún fresco.</p>
+                    <span>Precio: 13,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/151_SashamiDorada.png" title="Sashimi de Dorada" alt="Sashimi de Dorada" class="menu-item-img">
+                    <h3>151 · Sashimi Dorada</h3>
+                    <p>Sashimi de dorada.</p>
+                    <span>Precio: 10,20 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="" alt="Imagen no disponible" class="menu-item-img">
+                    <h3>152 · Sashimi Variado</h3>
+                    <p>Sashimi variado, una selección de diferentes pescados.</p>
+                    <span>Precio: 10,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Sushis/153_SashamiVariado.png" title="Variado" alt="Variado" class="menu-item-img">
+                    <h3>153 · Variado</h3>
+                    <p>Combinado variado de sushi.</p>
+                    <span>Precio: 16,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6 - Makis -->
+        <section id="makis" class="menu-section">
+            <h2>6 - Makis</h2>
+            <div class="menu-table">
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/97_TemakiSalmon.png" title="Temaki de Salmón" alt="Temaki de Salmón" class="menu-item-img">
+                    <h3>97 · Temaki de Salmón</h3>
+                    <p>Cono de sushi relleno de salmón.</p>
+                    <span>Precio: 4,55 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/PlatoCaliente/99_TemakiSalmonEnsalada.png" title="Temaki De Salmón y Ensalada" alt="Temaki De Salmón y Ensalada" class="menu-item-img">
+                    <h3>99 · Temaki De Salmón y Ensalada</h3>
+                    <p>Cono de sushi con salmón y ensalada.</p>
+                    <span>Precio: 4,15 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/105_MakiPepino.png" title="Maki de Pepino" alt="Maki de Pepino" class="menu-item-img">
+                    <h3>105 · Maki Pepino</h3>
+                    <p>Maki de pepino fresco.</p>
+                    <span>Precio: 4,20 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/106_MakiCangrejo.png" title="Maki de Cangrejo" alt="Maki de Cangrejo" class="menu-item-img">
+                    <h3>106 · Maki Cangrejo</h3>
+                    <p>Maki de cangrejo.</p>
+                    <span>Precio: 3,60 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/107_MakiSalmon.png" title="Maki con salmón" alt="Maki con salmón fresco" class="menu-item-img">
+                    <h3>107 · Maki Salmón</h3>
+                    <p>Maki con salmón fresco.</p>
+                    <span>Precio: 4,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/108_MakiAtun.png" title="Maki de atún fresco" alt="Maki de atún fresco" class="menu-item-img">
+                    <h3>108 · Maki Atún</h3>
+                    <p>Maki de atún fresco.</p>
+                    <span>Precio: 4,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/109_MakiAguacate.png" title="Maki de aguacate" alt="Maki de aguacate" class="menu-item-img">
+                    <h3>109 · Maki Aguacate</h3>
+                    <p>Maki de aguacate.</p>
+                    <span>Precio: 4,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/114_MiniMakiSalmonTempura.png" title="Mini maki con salmón tempura" alt="Mini maki con salmón tempura" class="menu-item-img">
+                    <h3>114 · Mini Maki Salmón Tempura</h3>
+                    <p>Mini maki con salmón tempura.</p>
+                    <span>Precio: 5,75 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/96_TemakiCasa.png" title="Temaki La Casa" alt="Temaki La Casa" class="menu-item-img">
+                    <h3>96 · Temaki La Casa</h3>
+                    <p>Exquisito temaki especial de la casa.</p>
+                    <span>Precio: 4,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/98_TemakiGambas.png" title="Temaki relleno de gambas" alt="Temaki relleno de gambas frescas" class="menu-item-img">
+                    <h3>98 · Temaki Gambas</h3>
+                    <p>Temaki relleno de gambas frescas.</p>
+                    <span>Precio: 4,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/100_TemakiAtun.png" title="Temaki de atún con arroz y alga" alt="Temaki de atún fresco con arroz y alga nori" class="menu-item-img">
+                    <h3>100 · Temaki Atún</h3>
+                    <p>Temaki de atún fresco con arroz y alga nori.</p>
+                    <span>Precio: 4,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/115_FuromakiTempura.png" title="Futomaki tempura crujiente" alt="Futomaki tempura crujiente" class="menu-item-img">
+                    <h3>115 · Futomaki Tempura</h3>
+                    <p>Futomaki tempura crujiente.</p>
+                    <span>Precio: 7,45 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/116_RolloPolloTempura.png" title="Rollo de pollo tempura" alt="Rollo de pollo tempura" class="menu-item-img">
+                    <h3>116 · Rollo Pollo Tempura</h3>
+                    <p>Rollo de pollo tempura.</p>
+                    <span>Precio: 7,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/117_MakiEspecialTemmpura.png" title="Maki especial tempura" alt="Maki especial tempura" class="menu-item-img">
+                    <h3>117 · Maki Especial Tempura</h3>
+                    <p>Maki especial tempura.</p>
+                    <span>Precio: 6,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/118_CaliforniaTempura.png" title="California maki tempura" alt="California maki tempura" class="menu-item-img">
+                    <h3>118 · California Tempura</h3>
+                    <p>California maki tempura.</p>
+                    <span>Precio: 6,75 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="" alt="Imagen no disponible" class="menu-item-img">
+                    <h3>119 · Uramaki Tiras Picante I Pollo</h3>
+                    <p>Uramaki con pollo y tiras picantes.</p>
+                    <span>Precio: 8,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/120_RolloTaiji.png" title="Rollo especial Taiji" alt="Rollo especial Taiji" class="menu-item-img">
+                    <h3>120 · Rollo Taiji</h3>
+                    <p>Rollo especial Taiji.</p>
+                    <span>Precio: 7,10 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/126_UramakiSalmonAguacateKiwi.png" title="Uramaki de salmón, aguacate y kiwi" alt="Uramaki de salmón, aguacate y kiwi" class="menu-item-img">
+                    <h3>126 · Uramaki de Salmón Aguacate y Kiwi</h3>
+                    <p>Uramaki de salmón, aguacate y kiwi.</p>
+                    <span>Precio: 7,45 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/127_UramakiNagoya.png" title="Uramaki al estilo Nagoya" alt="Uramaki con ingredientes al estilo Nagoya" class="menu-item-img">
+                    <h3>127 · Uramaki Nagoya</h3>
+                    <p>Uramaki con ingredientes al estilo Nagoya.</p>
+                    <span>Precio: 7,55 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/128_UramakiYokohama.png" title="Uramaki al estilo Yokohama" alt="Uramaki al estilo Yokohama" class="menu-item-img">
+                    <h3>128 · Uramaki Yokohama</h3>
+                    <p>Uramaki al estilo Yokohama.</p>
+                    <span>Precio: 6,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/129_UramakiSalmonFlameado.png" title="Uramaki de salmón flameado" alt="Uramaki de salmón flameado" class="menu-item-img">
+                    <h3>129 · Uramaki de Salmón Flameado</h3>
+                    <p>Uramaki de salmón flameado.</p>
+                    <span>Precio: 7,85 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/131_UramakiMango.png" title="Uramaki con mango" alt="Uramaki con mango" class="menu-item-img">
+                    <h3>131 · Uramaki Mango</h3>
+                    <p>Uramaki con mango.</p>
+                    <span>Precio: 7,75 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/132_UramakiSakeSpicy.png" title="Uramaki con salmón picante" alt="Uramaki con salmón picante" class="menu-item-img">
+                    <h3>132 · Uramaki Sake Spicy</h3>
+                    <p>Uramaki con salmón picante.</p>
+                    <span>Precio: 6,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/133_UramakiGambaLechuga.png" title="Uramaki de gamba y lechuga" alt="Uramaki de gamba y lechuga" class="menu-item-img">
+                    <h3>133 · Uramaki de Gamba y Lechuga</h3>
+                    <p>Uramaki de gamba y lechuga.</p>
+                    <span>Precio: 7,85 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/134_UramakiCalifornia.png" title="Uramaki estilo California" alt="v" class="menu-item-img">
+                    <h3>134 · Uramaki California</h3>
+                    <p>Uramaki estilo California.</p>
+                    <span>Precio: 6,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/135_UramakiAlaska.png" title="Uramaki estilo Alaska" alt="Uramaki estilo Alaska" class="menu-item-img">
+                    <h3>135 · Uramaki Alaska</h3>
+                    <p>Uramaki estilo Alaska.</p>
+                    <span>Precio: 7,25 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/136_UramakiKyoto.png" title="Uramaki estilo Kyoto" alt="Uramaki estilo Kyoto" class="menu-item-img">
+                    <h3>136 · Uramaki Kyoto</h3>
+                    <p>Uramaki estilo Kyoto.</p>
+                    <span>Precio: 7,65 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="" alt="Imagen no disponible" class="menu-item-img">
+                    <h3>138 · Uramaki Osaka</h3>
+                    <p>Uramaki estilo Osaka.</p>
+                    <span>Precio: 6,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/139_UramakiEntrecotEsparrago.png" title="Uramaki con entrecot y espárrago." alt="Uramaki con entrecot y espárrago." class="menu-item-img">
+                    <h3>139 · Uramaki de Entrecot y Espárrago</h3>
+                    <p>Uramaki con entrecot y espárrago.</p>
+                    <span>Precio: 8,15 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/140_UramakiChiba.png" title="Uramaki estilo Chiba" alt="Uramaki estilo Chiba" class="menu-item-img">
+                    <h3>140 · Uramaki Chiba</h3>
+                    <p>Uramaki estilo Chiba.</p>
+                    <span>Precio: 8,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/141_UramakiClassic.png" title="Uramaki Clásico" alt="Uramaki clásico" class="menu-item-img">
+                    <h3>141 · Uramaki Classic</h3>
+                    <p>Uramaki clásico.</p>
+                    <span>Precio: 7,15 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/142_UramakiKawasaki.png" title="Uramaki estilo Kawasaki" alt="Uramaki estilo Kawasaki" class="menu-item-img">
+                    <h3>142 · Uramaki Kawasaki</h3>
+                    <p>Uramaki estilo Kawasaki.</p>
+                    <span>Precio: 7,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/143_CheesePhiladelphia.png" title="Uramaki con queso Philadelphia" alt="Uramaki con queso Philadelphia" class="menu-item-img">
+                    <h3>143 · Cheese Philadelphia</h3>
+                    <p>Uramaki con queso Philadelphia.</p>
+                    <span>Precio: 7,25 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Makis/145_UramakiPatoPepino.png" title="Uramaki de Pato y Pepino" alt="Uramaki de Pato y Pepino" class="menu-item-img">
+                    <h3>145 · Uramaki de Pato y Pepino</h3>
+                    <p>Uramaki con pato y pepino.</p>
+                    <span>Precio: 7,85 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Postres -->
+        <section id="postres" class="menu-section">
+            <h2>Postres</h2>
+            <div class="menu-table">
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Yogur" alt="Yogur" class="menu-item-img">
+                    <h3>349 · Yogur</h3>
+                    <span>Precio: 2,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>    
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Mochi" alt="Mochi" class="menu-item-img">
+                    <h3>602 · Mochi</h3>
+                    <span>Precio: 4,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Gelat De Te Verde" alt="Gelat De Te Verde" class="menu-item-img">
+                    <h3>604 · Gelat De Te Verde</h3>
+                    <span>Precio: 3,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Bola De Gelat" alt="Bola De Gelat" class="menu-item-img">
+                    <h3>605 · Bola De Gelat</h3>
+                    <span>Precio: 1,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Dorayaki" alt="Dorayaki" class="menu-item-img">
+                    <h3>606 · Dorayaki</h3>
+                    <span>Precio: 4,20 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Souffle De Xoco" alt="Souffle De Xoco" class="menu-item-img">
+                    <h3>610 · Souffle De Xoco</h3>
+                    <span>Precio: 4,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Gelat De Baileys" alt="Gelat De Baileys" class="menu-item-img">
+                    <h3>613 · Gelat De Baileys</h3>
+                    <span>Precio: 4,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Crema Catalana" alt="Crema Catalana" class="menu-item-img">
+                    <h3>614 · Crema Catalana</h3>
+                    <span>Precio: 4,20 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Mascarpone I Fruits Del Bosc" alt="Mascarpone I Fruits Del Bosc" class="menu-item-img">
+                    <h3>616 · Mascarpone I Fruits Del Bosc</h3>
+                    <span>Precio: 4,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Tiramissu Amb Te Verde" alt="Tiramissu Amb Te Verde" class="menu-item-img">
+                    <h3>618 · Tiramissu Amb Te Verde</h3>
+                    <span>Precio: 4,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Biscuit Crocant Gelat" alt="Biscuit Crocant Gelat" class="menu-item-img">
+                    <h3>620 · Biscuit Crocant Gelat</h3>
+                    <span>Precio: 4,20 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Gelat De Vainilla" alt="Gelat De Vainilla" class="menu-item-img">
+                    <h3>621 · Gelat De Vainilla</h3>
+                    <span>Precio: 4,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Sorbet De Mango" alt="Sorbet De Mango" class="menu-item-img">
+                    <h3>622 · Sorbet De Mango</h3>
+                    <span>Precio: 4,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Trufes Japoneses" alt="Trufes Japoneses" class="menu-item-img">
+                    <h3>624 · Trufes Japoneses</h3>
+                    <span>Precio: 3,75 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/imagen-no-disponible.jpg" title="Makis De Gelat" alt="Makis De Gelat" class="menu-item-img">
+                    <h3>625 · Makis De Gelat</h3>
+                    <span>Precio: 4,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>              
+            </div>
+        </section>
+
+        <!-- Bebidas -->
+        <section id="beidas" class="menu-section">
+                    <h2>Bebidas</h2>
+                    <div class="menu-table">
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpg" title="Agua Mineral 50Cl" alt="Agua Mineral 50Cl" class="menu-item-img">
+                            <h3>300 · Agua Mineral 50Cl</h3>
+                            <span>Precio: 2,15 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpg" title="Agua Con Gas, Caseosa" alt="Agua Con Gas, Caseosa" class="menu-item-img">
+                            <h3>301 · Agua Con Gas, Caseosa</h3>
+                            <span>Precio: 2,25 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpg" title="Coca Cola / Fanta" alt="Coca Cola / Fanta" class="menu-item-img">
+                            <h3>303 · Coca Cola / Fanta</h3>
+                            <span>Precio: 2,35 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpg" title="Nestea / Aquarius / Tónica / Trina" alt="Nestea / Aquarius / Tónica / Trina" class="menu-item-img">
+                            <h3>304 · Nestea / Aquarius / Tónica / Trina</h3>
+                            <span>Precio: 2,35 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpg" title="Cerveza Japonesa" alt="Cerveza Japonesa" class="menu-item-img">
+                            <h3>305 · Cerveza Japonesa</h3>
+                            <span>Precio: 3,95 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpg" title="Sake 20Cl" alt="Sake 20Cl" class="menu-item-img">
+                            <h3>306 · Sake 20Cl</h3>
+                            <span>Precio: 5,60 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>                  
+                    </div>
+        </section>
+    
+        <!-- Cafes -->
+        <section id="cafes" class="menu-section">
+                    <h2>Cafes</h2>
+                    <div class="menu-table">
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpg" title="Café Solo" alt="Café Solo" class="menu-item-img">
+                            <h3>350 · Café Solo</h3>
+                            <span>Precio: 1,30 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpg" title="Café Cortado" alt="Café Cortado" class="menu-item-img">
+                            <h3>351 · Café Cortado</h3>
+                            <span>Precio: 1,40 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpg" title="Café con Leche" alt="Café con Leche" class="menu-item-img">
+                            <h3>352 · Café con Leche</h3>
+                            <span>Precio: 1,50 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpgCarajilloTrifasico.png" title="Carajillo Trifásico" alt="Carajillo Trifásico" class="menu-item-img">
+                            <h3>353 · Carajillo Trifásico</h3>
+                            <span>Precio: 2,20 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpgTeJapones.png" title="Té Japonés" alt="Té Japonés" class="menu-item-img">
+                            <h3>354 · Té Japonés</h3>
+                            <span>Precio: 2,00 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpgInfussions.png" title="Infusiones" alt="Infusiones" class="menu-item-img">
+                            <h3>355 · Infusiones</h3>
+                            <span>Precio: 1,80 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpgCafeIrlandesWhisky.png" title="Café Irlandés con Whisky" alt="Café Irlandés con Whisky" class="menu-item-img">
+                            <h3>356 · Café Irlandés con Whisky</h3>
+                            <span>Precio: 6,50 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                        <div class="menu-item">
+                            <img src="Images/Comida/imagen-no-disponible.jpgCapucino.png" title="Café Capuchino" alt="Café Capuchino" class="menu-item-img">
+                            <h3>Capuchino</h3>
+                            <span>Precio: 1,50 €</span>
+                            <button class="add-to-cart">Añadir a la Cesta</button>
+                        </div>
+                    </div>
+        </section>
+
+        <!-- Sangrias y Cavas -->
+        <section id="sangrias-cavas" class="menu-section">
+            <h2>Sangrias y Cavas</h2>
+            <div class="menu-table">
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/SangriaMedia.png" title="Sangria 1/2" alt="Sangria 1/2" class="menu-item-img">
+                    <h3>270A · Sangría 1/2</h3>
+                    <span>Precio: 0,00 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/SangriaDeVino.png" title="Sangría De Vino" alt="Sangría De Vino" class="menu-item-img">
+                    <h3>270 · Sangría De Vino</h3>
+                    <span>Precio: 15,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/SangriaCavaMedia.png" title="1/2 Sangría De Cava" alt="1/2 Sangría De Cava" class="menu-item-img">
+                    <h3>271A · 1/2 Sangría De Cava</h3>
+                    <span>Precio: 0,00 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/SangriaDeCava.png" title="Sangría De Cava" alt="Sangría De Cava" class="menu-item-img">
+                    <h3>271 · Sangría De Cava</h3>
+                    <span>Precio: 17,45 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/BachBrut.png" title="Bach Brut" alt="Bach Brut" class="menu-item-img">
+                    <h3>280 · Bach Brut</h3>
+                    <span>Precio: 10,95 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/AnnaCodorniuBrut.png" title="Cava Anna Codorniu Brut" alt="Cava Anna Codorniu Brut" class="menu-item-img">
+                    <h3>281 · Cava Anna Codorniu Brut</h3>
+                    <span>Precio: 19,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>                        
+            </div>
+        </section>
+
+        <!-- Vinos -->
+        <section id="vinos" class="menu-section">
+            <h2>Vinos</h2>
+            <div class="menu-table">
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/180_BlancPescador.png" title="Blanc Pescador" alt="Blanc Pescador" class="menu-item-img">
+                    <h3>180 · Blanc Pescador 0,5ml</h3>
+                    <span>Precio: 8,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/181_AntonioBarbadillo.png" title="Antonio Barbadillo" alt="Antonio Barbadillo" class="menu-item-img">
+                    <h3>181 · Antonio Barbadillo 5</h3>
+                    <span>Precio: 7,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/182_ViSol.png" title="Vi Sol" alt="Vi Sol" class="menu-item-img">
+                    <h3>182 · Vi Sol 0,5Ml</h3>
+                    <span>Precio: 9,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/183_TorresEsmeralda.png" title="Torres Esmeralda" alt="Torres Esmeralda" class="menu-item-img">
+                    <h3>183 · Torres Esmeralda 0,5</h3>
+                    <span>Precio: 13,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/184_PescallRosado.png" title="Pescal Rosado" alt="Pescal Rosado" class="menu-item-img">
+                    <h3>184 · Pescal 0,5ml Rosado</h3>
+                    <span>Precio: 7,60 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/185_MarquesCaceresRosa.png" title="Marques Caceres Rosa" alt="Marques Caceres Rosa" class="menu-item-img">
+                    <h3>185 · Marques Caceres Rosa 0,5</h3>
+                    <span>Precio: 11,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/186_ElCotoTinto.png" title="El Coto Tinto" alt="El Coto Tinto" class="menu-item-img">
+                    <h3>186 · El Coto 0,5Ml, Tinto</h3>
+                    <span>Precio: 10,20 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/187_MarqscasTinto.png" title="Marqscas Tinto" alt="Marqscas Tinto" class="menu-item-img">
+                    <h3>187 · Marqscas, Tinto, 0,5ml</h3>
+                    <span>Precio: 10,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/188_MartinCodaxBlanc.png" title="Martin Codax Blanc" alt="Martin Codax Blanc" class="menu-item-img">
+                    <h3>188 · Martin Codax Blanc 1/2ml</h3>
+                    <span>Precio: 12,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/189_MarquesCaceresBlanc.png" title="Marques Caceres Blanc" alt="Marques Caceres Blanc" class="menu-item-img">
+                    <h3>189 · Marques Caceres Blanc 0,5</h3>
+                    <span>Precio: 6,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/190_ReneBarierRosado.png" title="Rene Barier Rosado" alt="Rene Barier Rosado" class="menu-item-img">
+                    <h3>190 · Rene Barier Rosado 0,5M</h3>
+                    <span>Precio: 6,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/191_FaustiniTinto.png" title="Faustini Tinto" alt="Faustini Tinto" class="menu-item-img">
+                    <h3>191 · Faustini Tinto 0,5M</h3>
+                    <span>Precio: 9,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/192_ReneBarbierTinto.png" title="Rene Barbier Tinto" alt="Rene Barbier Tinto" class="menu-item-img">
+                    <h3>192 · Rene Barbier Tinto 0,5M</h3>
+                    <span>Precio: 6,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/193_CuneCrianzaTinto.png" title="Cune Crianza Tinto" alt="Cune Crianza Tinto" class="menu-item-img">
+                    <h3>193 · Cune Crianza Tinto 0,5M</h3>
+                    <span>Precio: 10,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/194_MarquesCacerTinto.png" title="Marques Cacer Tinto" alt="Marques Cacer Tinto" class="menu-item-img">
+                    <h3>194 · Marques Cacer Tinto 0,5M</h3>
+                    <span>Precio: 10,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/201_AntonioBarbadillo.png" title="Antonio Barbadillo" alt="Antonio Barbadillo" class="menu-item-img">
+                    <h3>201 · Antonio Barbadillo</h3>
+                    <span>Precio: 10,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/202_ViSol.png" title="Vi Sol" alt="Vi Sol" class="menu-item-img">
+                    <h3>202 · Vi Sol</h3>
+                    <span>Precio: 14,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/203_EsmeraldaTorres.png" title="Esmeralda Torres" alt="Esmeralda Torres" class="menu-item-img">
+                    <h3>203 · Esmeralda Torres</h3>
+                    <span>Precio: 18,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/204_BachBlanco.png" title="Bach Blanco" alt="Bach Blanco" class="menu-item-img">
+                    <h3>204 · Bach Blanco</h3>
+                    <span>Precio: 11,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/205_RaimatChardonnay.png" title="Raimat Chardonnay Blanco" alt="Raimat Chardonnay Blanco" class="menu-item-img">
+                    <h3>205 · Raimat Chardonnay Blanco</h3>
+                    <span>Precio: 17,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/206_VinoBlancoCasa.png" title="Vino Blanco de la Casa" alt="Vino Blanco de la Casa" class="menu-item-img">
+                    <h3>206 · Vino Blanco de la Casa</h3>
+                    <span>Precio: 9,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/207_ElCoto.png" title="El Coto" alt="El Coto" class="menu-item-img">
+                    <h3>207 · El Coto</h3>
+                    <span>Precio: 12,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/208_MartinCodax.png" title="Martin Codax Blanc" alt="Martin Codax Blanc" class="menu-item-img">
+                    <h3>208 · Martin Codax Blanc</h3>
+                    <span>Precio: 26,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/209_MarquesDeCaceres.png" title="Marques De Caceres" alt="Marques De Caceres" class="menu-item-img">
+                    <h3>209 · Marques De Caceres</h3>
+                    <span>Precio: 13,20 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/210_PescalRosado.png" title="Pescal Rosado" alt="Pescal Rosado" class="menu-item-img">
+                    <h3>210 · Pescal Rosado</h3>
+                    <span>Precio: 11,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/211_GranFeudoRosado.png" title="Gran Feudo Rosado" alt="Gran Feudo Rosado" class="menu-item-img">
+                    <h3>211 · Gran Feudo Rosado</h3>
+                    <span>Precio: 12,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/212_LambruscoRosado.png" title="Lambrusco Rosado" alt="Lambrusco Rosado" class="menu-item-img">
+                    <h3>212 · Lambrusco Rosado</h3>
+                    <span>Precio: 10,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/213_MarquesCaceresRosado.png" title="Marques Caceres Rosado" alt="Marques Caceres Rosado" class="menu-item-img">
+                    <h3>213 · Marques Caceres, Rosado</h3>
+                    <span>Precio: 14,00 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/214_EnateRosado.png" title="Enate Rosado" alt="Enate Rosado" class="menu-item-img">
+                    <h3>214 · Enate, Rosado</h3>
+                    <span>Precio: 18,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/215_VinoRosadoCasa.png" title="Vino Rosado de la Casa" alt="Vino Rosado de la Casa" class="menu-item-img">
+                    <h3>215 · Vino Rosado de la Casa</h3>
+                    <span>Precio: 9,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/216_ReneBarbierRosado.png" title="Rene Barbier Rosado" alt="Rene Barbier Rosado" class="menu-item-img">
+                    <h3>216 · Rene Barbier Rosado</h3>
+                    <span>Precio: 11,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/217_LasCampanasRosado.png" title="Las Campanas Rosado" alt="Las Campanas Rosado" class="menu-item-img">
+                    <h3>217 · Las Campanas Rosado</h3>
+                    <span>Precio: 11,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/218_FaustinoViiRioja.png" title="Faustino VII Rioja" alt="Faustino VII Rioja" class="menu-item-img">
+                    <h3>218 · Faustino VII (Rioja)</h3>
+                    <span>Precio: 9,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/220_CampoViejoTemTinto.png" title="Campo Viejo Tem Tinto" alt="Campo Viejo Tem Tinto" class="menu-item-img">
+                    <h3>220 · Campo Viejo Tem Tinto</h3>
+                    <span>Precio: 12,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/221_CampoViejoCrzTinto.png" title="Campo Viejo Crz Tinto" alt="Campo Viejo Crz Tinto" class="menu-item-img">
+                    <h3>221 · Campo Viejo Crz Tinto</h3>
+                    <span>Precio: 14,90 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/222_RaimatCrianzaTinto.png" title="Raimat Crianza Tinto" alt="Raimat Crianza Tinto" class="menu-item-img">
+                    <h3>222 · Raimat Crianza Tinto</h3>
+                    <span>Precio: 19,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/223_FaustinoViiTinto.png" title="Faustino VII Tinto" alt="Faustino VII Tinto" class="menu-item-img">
+                    <h3>223 · Faustino VII Tinto</h3>
+                    <span>Precio: 13,20 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/224_ElCotoTinto.png" title="El Coto Tinto" alt="El Coto Tinto" class="menu-item-img">
+                    <h3>224 · El Coto, Tinto</h3>
+                    <span>Precio: 13,60 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/225_MarquesCaceresTinto.png" title="Marques Caceres Tinto" alt="Marques Caceres Tinto" class="menu-item-img">
+                    <h3>225 · Marques Caceres, Tinto</h3>
+                    <span>Precio: 16,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/226_GranFeudoCrianzaTinto.png" title="Gran Feudo Crianza, Tinto" alt="Gran Feudo Crianza, Tinto" class="menu-item-img">
+                    <h3>226 · Gran Feudo Crianza, Tinto</h3>
+                    <span>Precio: 13,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/227_PereladaCrianzaTinto.png" title="Perelada Crianza Tinto" alt="Perelada Crianza Tinto" class="menu-item-img">
+                    <h3>227 · Perelada Crianza, 3 Tinto</h3>
+                    <span>Precio: 14,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/228_ViMayorTinto.png" title="Vi Mayor Tinto" alt="Vi Mayor Tinto" class="menu-item-img">
+                    <h3>228 · Vi Mayor Tinto</h3>
+                    <span>Precio: 14,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/229_VinoCasaTinto.png" title="Vino de la Casa" alt="Vino de la Casa" class="menu-item-img">
+                    <h3>229 · Vino de la Casa</h3>
+                    <span>Precio: 9,30 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/230_EnateTinto.png" title="Enate Tinto" alt="Enate Tinto" class="menu-item-img">
+                    <h3>230 · Enate, Tinto</h3>
+                    <span>Precio: 15,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/231_ReneBarbierTinto.png" title="Rene Barbier Tinto" alt="Rene Barbier Tinto" class="menu-item-img">
+                    <h3>231 · Rene Barbier Tinto</h3>
+                    <span>Precio: 11,80 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/232_CuneCrianza.png" title="Cune Crianza" alt="Cune Crianza" class="menu-item-img">
+                    <h3>232 · Cune Crianza</h3>
+                    <span>Precio: 15,50 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+                <div class="menu-item">
+                    <img src="Images/Comida/Vinos/233_ElCotoRosado.png" title="El Coto Rosado" alt="El Coto Rosado" class="menu-item-img">
+                    <h3>233 · El Coto Rosado</h3>
+                    <span>Precio: 10,70 €</span>
+                    <button class="add-to-cart">Añadir a la Cesta</button>
+                </div>
+            </div>
+        </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contacto">
+        <h2>Contacto</h2>
+        <p>📍 Rambla Marquesa de Castellbell, 30, 08980 Sant Feliu de Llobregat, Barcelona</p>
+        <p>📞 +34 936 63 66 75</p>
+    
+        <!-- Mapa de Google Maps -->
+        <div class="mapa-contenedor">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.953629184635!2d2.0356299757595146!3d41.38423039615879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a499c6c808e02f%3A0x249ac74b1b5b9c3!2sRambla%20Marquesa%20de%20Castellbell%2C%2030%2C%2008980%20Sant%20Feliu%20de%20Llobregat%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1709497362983!5m2!1ses!2ses" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <img src="Images/Logo/LogoKiyomi.png" alt="Kiyomi - Restaurante Japonés">
+        </div>
+        <p>&copy; 2025 Kiyomi - Restaurante Japonés. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

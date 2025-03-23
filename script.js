@@ -1,21 +1,104 @@
+//Navbar inferior
 document.addEventListener("DOMContentLoaded", function () {
-    const btnFlecha = document.getElementById("btnFlecha");
-    const heroSection = document.querySelector(".hero");
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.getElementById("navbar");
 
-    function toggleButtonVisibility() {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        const screenWidth = window.innerWidth;
+    menuToggle.addEventListener("click", function () {
+        navbar.classList.toggle("show"); // Alternar la clase 'show'
+    });
+});
 
-        if (heroBottom < 0 && screenWidth <= 1024) {
-            btnFlecha.style.display = "flex";
-        } else {
-            btnFlecha.style.display = "none";
+//Pestaña Register-Login
+    // Obtener elementos del DOM
+    const modal = document.getElementById("modalRegistro");
+    const btnSignUp = document.querySelector(".sign-up"); // Botón "Sign Up"
+    const closeModal = document.querySelector(".close");
+
+    // Mostrar el modal cuando se haga clic en "Sign Up"
+    btnSignUp.addEventListener("click", function(event) {
+        event.preventDefault(); // Evita que el botón redireccione
+        modal.style.display = "flex";
+    });
+
+    // Cerrar el modal al hacer clic en la 'X'
+    closeModal.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    // Cerrar el modal si se hace clic fuera de él
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
         }
-    }
+    });
 
-    // Comprobar al cargar la página y en cada scroll o cambio de tamaño
-    window.addEventListener("scroll", toggleButtonVisibility);
-    window.addEventListener("resize", toggleButtonVisibility);
-    
-    toggleButtonVisibility(); // Ejecutar al inicio por si la página se carga ya desplazada
+    // Obtener elementos del DOM
+    const modalSingin = document.getElementById("modaliniciosesion");
+    const btnSignin = document.querySelector(".sign-in"); // Botón "Sign Up"
+    const closeModalSingin = document.querySelector(".close");
+
+    // Mostrar el modal cuando se haga clic en "Sign Up"
+    btnSignin.addEventListener("click", function(event) {
+        event.preventDefault(); // Evita que el botón redireccione
+        modalSingin.style.display = "flex";
+    });
+
+    // Cerrar el modal al hacer clic en la 'X'
+    closeModalSingin.addEventListener("click", function() {
+        modalSingin.style.display = "none";
+    });
+
+    // Cerrar el modal si se hace clic fuera de él
+    window.addEventListener("click", function(event) {
+        if (event.target === modalSingin) {
+            modalSingin.style.display = "none";
+        }
+    });
+
+
+
+
+//Register-Login
+
+document.addEventListener("DOMContentLoaded", function () {
+    const registerForm = document.getElementById("register-form");
+
+    if (registerForm) {
+        registerForm.addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("register-name").value.trim();
+            const email = document.getElementById("register-email").value.trim();
+            const password = document.getElementById("register-password").value;
+            const confirmPassword = document.getElementById("register-confirm-password").value;
+
+            // Validar que los campos no estén vacíos
+            if (!name || !email || !password || !confirmPassword) {
+                alert("Por favor, completa todos los campos.");
+                return;
+            }
+
+            // Validar que las contraseñas coincidan
+            if (password !== confirmPassword) {
+                alert("Las contraseñas no coinciden.");
+                return;
+            }
+
+            // Enviar los datos al backend
+            const response = await fetch("register.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, password })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                alert("¡Registro exitoso! Ahora puedes iniciar sesión.");
+                document.getElementById("register-modal").style.display = "none";
+            } else {
+                alert(result.message);
+            }
+        });
+    }
 });
