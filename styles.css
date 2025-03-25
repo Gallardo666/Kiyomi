@@ -575,7 +575,6 @@ footer {
     border-radius: 50%;
 }
 
-
 /* Estilos actualizados para el modal */
 .modal {
     display: none; 
@@ -590,29 +589,6 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 1rem;
-}
-
-/* Contenedor del modal actualizado: ancho máximo y altura limitada */
-.modal-content {
-    background: white;
-    padding: 25px;
-    width: 90%;
-    max-width: 500px; /* Aumentado de 400px a 500px */
-    max-height: 80vh; /* No sobrepasar el 80% del viewport */
-    overflow-y: auto; /* Si el contenido excede, mostrará scroll vertical */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    position: relative;
-    z-index: 2100;
-}
-
-/* Media query para pantallas pequeñas */
-@media screen and (max-width: 600px) {
-    .modal-content {
-        width: 95%;
-        padding: 20px;
-    }
 }
 
 .modal h2{
