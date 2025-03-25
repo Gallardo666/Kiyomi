@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,18 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <!-- Sticky Navbar con Top Navbar y Navbar principal -->
     <div class="sticky-nav-container">
-        <!-- Navbar superior para sesión y cesta -->
+        <!-- Top Navbar para inicio de sesión y cesta -->
         <nav class="top-navbar">
-            <!-- Botón del menú hamburguesa -->
             <button class="menu-btn" id="menu-toggle">☰</button>
-    
-            <!-- Contenedor centrado para el logo y nombre -->
             <div class="logo-center">
                 <h1><a href="#">Kiyomi</a></h1>
             </div>
-    
-            <!-- Contenedor de registro -->
             <div class="top-nav-links">
                 <div class="btn-inicio">
                     <button class="nav-btn sign-in"><a href="#">Sign In</a></button>
@@ -29,13 +26,11 @@
                 <button class="nav-btn carrito">                
                     <a href="#" class="cart-icon">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">3</span> <!-- Número de artículos en el carrito -->
+                        <span class="cart-count">0</span>
                     </a>
                 </button>
             </div>
-            
         </nav>
-    
         <!-- Navbar principal de navegación -->
         <nav id="navbar" class="main-nav">
             <ul>
@@ -47,61 +42,50 @@
             </ul>
         </nav>
     </div>
-    
-    
 
+    <!-- Header principal -->
     <header>
-        <h1>Kiyomi</h1>
         <div class="logo">
             <img src="Images/Logo/LogoKiyomi.png" alt="Kiyomi - Restaurante Japonés">
         </div>
+        <h1>Kiyomi</h1>
     </header>
 
+    <!-- Sección de Inicio -->
     <section id="inicio" class="inicio">
         <h2>Bienvenido a Kiyomi</h2>
-        <p>Auténtica experiencia japonesa en Sant Feliu de Llobregat. Disfruta de nuestros deliciosos sushi, ramen, y otros platos tradicionales japoneses en un ambiente acogedor y moderno. Ya sea que prefieras comer en el restaurante o disfrutar de nuestra comida en casa, te garantizamos una experiencia única y deliciosa. ¡Ven y descubre lo mejor de la cocina japonesa!</p>
+        <p>Auténtica experiencia japonesa en Sant Feliu de Llobregat. Disfruta de nuestros deliciosos sushi, ramen, y otros platos tradicionales en un ambiente acogedor y moderno. Ya sea que prefieras comer en el restaurante o disfrutar de nuestra comida en casa, te garantizamos una experiencia única y deliciosa. ¡Ven y descubre lo mejor de la cocina japonesa!</p>
         <a href="#reservas" class="btn">Reservar ahora</a>
         <a href="#pedidos" class="btn secondary">Pedir a domicilio</a>
     </section>
-    
 
+    <!-- Sección de Menú -->
     <section id="menu" class="menu">
         <h2>Nuestro Menú</h2>
-        <p>Descubre nuestras especialidades japonesas, preparadas con ingredientes frescos y de calidad. Desde sushi tradicional hasta platos más innovadores, tenemos algo para todos los gustos.</p>
-        <p>Te invitamos a probar:</p>
-        <ul>
-            <li>Sushi Rolls: Variedad de rollos con pescado fresco y vegetales.</li>
-            <li>Sashimi: Pescado crudo de la más alta calidad, servido de forma elegante.</li>
-            <li>Ramen: Un delicioso caldo japonés con fideos y acompañamientos.</li>
-            <li>Tempura: Mariscos y vegetales empanados y fritos al estilo japonés.</li>
-        </ul>
+        <p>Descubre nuestras especialidades japonesas, preparadas con ingredientes frescos y de calidad. Desde sushi tradicional hasta platos innovadores, tenemos algo para todos los gustos.</p>
         <a href="menu.html" class="btn">Ver Menú Completo</a>
     </section>
-    
 
+    <!-- Sección de Reservas -->
     <section id="reservas" class="reservas">
         <h2>Reserva una Mesa</h2>
-        <p>Disfruta de una cena inolvidable en nuestro restaurante, donde podrás deleitarte con los mejores platos de la cocina japonesa, preparados por nuestros chefs expertos. 
-            Ya sea para una ocasión especial o una cena casual, te ofrecemos el ambiente perfecto para compartir con amigos, familiares o seres queridos.
-        </p>
-        <p class="te-esperamos">Selecciona la fecha y la hora que más te convenga para disfrutar de nuestra experiencia culinaria. ¡Te esperamos con los brazos abiertos!</p>
+        <p>Disfruta de una cena inolvidable en nuestro restaurante, donde podrás deleitarte con los mejores platos de la cocina japonesa, preparados por nuestros chefs expertos.</p>
+        <p class="te-esperamos">Selecciona la fecha y hora que más te convenga. ¡Te esperamos con los brazos abiertos!</p>
         <a href="#" class="btn">Hacer Reserva</a>
     </section>
-    
 
+    <!-- Sección de Pedidos -->
     <section id="pedidos" class="pedidos">
         <h2>Haz tu Pedido</h2>
         <p>Elige entre recoger en el local o recibir tu comida en casa. Haz tu pedido cómodamente desde donde estés y en el momento que más te convenga.</p>
         <a href="#" class="btn">Pedir Ahora</a>
-    </section>    
-    
+    </section>
 
+    <!-- Sección de Contacto -->
     <section id="contacto" class="contacto">
         <h2>Contacto</h2>
         <p>📍 Rambla Marquesa de Castellbell, 30, 08980 Sant Feliu de Llobregat, Barcelona</p>
         <p>📞 +34 936 63 66 75</p>
-    
-        <!-- Mapa de Google Maps -->
         <div class="mapa-contenedor">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.953629184635!2d2.0356299757595146!3d41.38423039615879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a499c6c808e02f%3A0x249ac74b1b5b9c3!2sRambla%20Marquesa%20de%20Castellbell%2C%2030%2C%2008980%20Sant%20Feliu%20de%20Llobregat%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1709497362983!5m2!1ses!2ses" 
@@ -114,59 +98,32 @@
             </iframe>
         </div>
     </section>
-    
 
+    <!-- Footer -->
     <footer>
         <div class="footer-logo">
             <img src="Images/Logo/LogoKiyomi.png" alt="Kiyomi - Restaurante Japonés">
         </div>
         <p>&copy; 2025 Kiyomi - Restaurante Japonés. Todos los derechos reservados.</p>
     </footer>
-    
-        
-    <!-- Modal de Inicio Sesion -->
-    <div id="modaliniciosesion" class="modal">
+
+    <!-- Modal de la Cesta de Compra -->
+    <div id="cartModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Iniciar Sesion</h2>
-            <form id="registroForm">
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
-            
-                <button type="submit">Sing In</button>
-            </form>
+            <span class="close" id="closeCart">&times;</span>
+            <h2>Tu Cesta</h2>
+            <div id="cartItems">
+                <!-- Los ítems añadidos se mostrarán aquí -->
+            </div>
+            <div id="cartTotal">
+                Total: €<span id="totalAmount">0.00</span>
+            </div>
+            <button id="checkoutBtn" class="btn">Realizar Pedido</button>
         </div>
     </div>
 
-    <!-- Modal de Registro -->
-    <div id="modalRegistro" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Registro</h2>
-            <form id="registroForm">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            
-                <label for="tel">Telefono:</label>
-                <input type="tel" id="tel" name="tel" required>
-
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
-            
-                <label for="confirmPassword">Confirmar Contraseña:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-            
-                <button type="submit">Registrarse</button>
-            </form>
-        </div>
-    </div>
-
+    <!-- Scripts -->
     <script src="script.js"></script>
+    <script src="src/shopping-cart.js"></script>
 </body>
 </html>

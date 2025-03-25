@@ -1472,7 +1472,20 @@
             </form>
         </div>
     </div>
-
+    <!-- Modal de la Cesta de Compra -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeCart">&times;</span>
+            <h2>Tu Cesta</h2>
+            <div id="cartItems">
+                <!-- Los ítems añadidos se mostrarán aquí -->
+            </div>
+            <div id="cartTotal">
+                Total: €<span id="totalAmount">0.00</span>
+            </div>
+            <button id="checkoutBtn" class="btn">Realizar Pedido</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 
 </body>
