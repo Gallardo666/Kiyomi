@@ -3,7 +3,7 @@
     --color-secondary: #1a1a1a; /* Fondo oscuro */
     --color-background: #e9e9e9; /* Fondo claro */
     --color-header-text: white;
-    --color-header-btn-register:#3e3e3e;
+    --color-header-btn-register: #3e3e3e;
     --color-link: #5979ca;
     --color-btn-hover: #d32f2f;
     --color-nav-background: rgba(0, 0, 0, 0.5);
@@ -21,7 +21,13 @@
     --color-item-shadow: rgba(0, 0, 0, 0.1); /* Sombra de los ítems */
 }
 
-/* Rest of your CSS code */
+/* Asegurar que no haya scroll horizontal */
+html, body {
+    overflow-x: hidden;
+}
+
+/* ===================== */
+/* General */
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
@@ -38,6 +44,10 @@ body {
     background-color: var(--color-background);
 }
 
+/* ===================== */
+/* Header unificado */
+/* ===================== */
+/* Se ha unificado el estilo del header usando el fondo y animaciones que emplea el header-menu */
 header {
     display: flex;
     flex-direction: row;
@@ -45,13 +55,13 @@ header {
     align-items: center;
     background: url('Images/Restaurante/EntradaRestaurante.jpg') no-repeat center center/cover;
     color: var(--color-header-text);
-    margin-top: -3rem;
-    padding: 37vh 10px;
+    margin-top: 0px; /* Se añade margin-top para que no quede tapado por el nav fijo */
+    padding: 36vh 10px; /* Tamaño moderado */
     text-align: left;
     position: relative;
+    overflow: hidden;
 }
 
-/* Agregar un fondo oscuro semi-transparente detrás del h1 */
 header::before {
     content: "";
     position: absolute;
@@ -63,194 +73,126 @@ header::before {
     z-index: 1;
 }
 
-/* Hacer el texto más legible con sombra */
 header h1 {
-    font-size: 12rem;
-    margin: 0;
+    font-size: 6rem;
+    margin: 0 6rem;
     padding: 0 2rem;
     position: relative;
     z-index: 2;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    animation: fadeInDown 0.8s forwards;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
 }
 
-/* Estilo para el logo */
-.logo {
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================== */
+/* Logo con animaciones y transiciones */
+/* ===================== */
+.logo,
+.logo-menu {
     display: flex;
     align-items: center;
     gap: 10px;
+    z-index: 1;
+
 }
 
-.logo img {
-    height: 15rem;
+.logo img,
+.logo-menu img {
+    margin-right: 6rem;
     border-radius: 50%;
-    padding: 0 5rem;
-    position: relative;
-    z-index: 2;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.8s forwards;
 }
 
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
-/* Ajustamos el navbar superior */
+/* ===================== */
+/* Navbar y Botones */
+/* ===================== */
+/* Nav Superior: Se define fixed para que permanezca visible */
 .top-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--color-footer-background);
     color: var(--color-header-text);
-    position: relative; /* Para que el botón ☰ se mantenga dentro */
     z-index: 1100;
+    padding: 8px 20px;
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+
+/* Logo central – se ajusta para que ocupe el espacio sin margen excesivo */
+.top-navbar .logo-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    z-index: 2;
+    text-align: center;
 }
 
 .top-nav-links {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    width: 100%;
 }
 
+/* Contenedor de botones de bienvenida – se separan verticalmente */
 .btn-inicio {
     display: flex;
-    gap: 1px; /* Reduce el espacio entre botones */
+    flex-wrap: wrap;
+    gap: 0.5rem;
     border-radius: 20px;
     background-color: var(--color-footer-background);
     transition: background-color 0.6s ease;
 }
 
+.btn-inicio button {
+    margin-top: 1rem;
+}
+
+/* Botones del nav */
 .nav-btn {
     cursor: pointer;
     font-size: 14px;
     background-color: var(--color-footer-background);
     border: none;
-    border-radius: 50px; /* Bordes redondeados */
+    border-radius: 50px;
     margin: 0;
     display: flex;
     align-items: center;
-    justify-content: center; /* Asegura que el contenido del botón esté centrado */
-    cursor: pointer; /* Cambia el cursor cuando pasa sobre el botón */
+    justify-content: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-} 
-.carrito {
-    background-color: var(--color-footer-background);
-    margin: 0rem 1.6rem;
-    padding: 1rem 1.2rem 0.8rem 1rem;
-}
-.carrito:hover {
-    background-color: var(--color-header-btn-register);
 }
 
-/* Estilos específicos paara cada botón */
-.sign-in {
-    background-color: var(--color-footer-background);
-    color: var(--color-header-text);
-    padding: 12px 15px; /* Aumenta el tamaño del botón */
-    font-size: 16px; /* Aumenta el tamaño del texto si es necesario */
-}
-.sign-up {
-    background-color: transparent; /* Quita el fondo */
-    color: var(--color-primary); /* Cambia el color del texto */
-    margin-left: 0.6rem;
-    padding: 12px 10px; /* Tamaño del botón */
-    font-size: 16px; /* Ajusta el tamaño de la fuente */
-}
-
-.sign-in:hover {
-    background-color: var(--color-header-btn-register);
-}
-.sign-up:hover {
-    background-color: var(--color-header-btn-register);
-}
-
-/* Botón del menú hamburguesa */
-.menu-btn {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-    margin-left: 10px;
-}
-
-/* Navbar principal */
-.main-nav {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background: var(--color-nav-background);
-    padding: 1rem 0;
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    display: none; /* Oculto por defecto */
-}
-
-/* Cuando el menú se activa */
-.main-nav.show {
-    display: block;
-}
-
-/* Estilos del menú */
-.main-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.main-nav ul li {
-    margin: 0 15px;
-}
-
-.main-nav ul li a {
-    color: var(--color-header-text);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.main-nav ul li a:hover {
-    color: var(--color-link);
-}
-
-
-/* Contenedor que hace sticky a ambos navbars */
-.sticky-nav-container {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1100; /* Asegura que los navbars estén por encima del contenido */
-}
-
-/* Estilo para el navbar superior */
-.top-navbar {
-    background-color: var(--color-footer-background);
-    color: var(--color-header-text);
-    padding: 8px 20px;
-    display: flex;
-    justify-content: space-between; /* Espacio entre el logo y los enlaces */
-    align-items: center;
-    font-size: 14px;
-    backdrop-filter: blur(10px);
-}
-
-/* Contenedor para alinear el logo en el centro */
-.top-navbar .logo-center {
-    flex: 1; /* Hace que ocupe todo el espacio disponible */
-    display: flex;
-    justify-content: center; /* Centra el logo */
-}
-
-/* Eliminar position: absolute para que no interfiera con los demás elementos */
-.logo-center {
-    margin-left: 16rem;
-    z-index: 2; /* Se asegura de que no quede cubierto por otros elementos */
-    text-align: center; /* Centra el texto dentro del contenedor */
-}
-
-/* Estilo para los enlaces dentro del top-navbar */
-.top-nav-links {
-    display: flex; /* Alinea los elementos horizontalmente */
-    align-items: center; /* Alinea verticalmente los enlaces */
-    justify-content: flex-end; /* Mantiene los enlaces a la derecha */
-}
-
-/* Estilos del icono del carrito */
 .cart-btn {
     background: none;
     border: none;
@@ -265,7 +207,6 @@ header h1 {
     color: white;
 }
 
-/* Contador de la cesta */
 .cart-count {
     background: var(--color-btn-hover);
     color: white;
@@ -273,14 +214,102 @@ header h1 {
     border-radius: 50%;
     padding: 3px 6px;
     position: absolute;
-    top: -5px; /* Se coloca sobre el ícono */
-    right: -10px; /* Posición en el borde derecho */
+    top: -5px;
+    right: -10px;
     font-weight: bold;
 }
 
+.carrito {
+    background-color: var(--color-footer-background);
+    margin: 0rem 1.6rem;
+    padding: 1rem 1.2rem 0.8rem 1rem;
+}
+.carrito:hover {
+    background-color: var(--color-header-btn-register);
+}
+
+.sign-in {
+    background-color: var(--color-footer-background);
+    color: var(--color-header-text);
+    padding: 12px 15px;
+    font-size: 16px;
+}
+.sign-up {
+    background-color: transparent;
+    color: var(--color-primary);
+    margin-left: 0.6rem;
+    padding: 12px 10px;
+    font-size: 16px;
+}
+.sign-in:hover,
+.sign-up:hover {
+    background-color: var(--color-header-btn-register);
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Nav Inferior: Se fija fixed con un offset para evitar solapamiento */
+.main-nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--color-nav-background);
+    padding: 1rem 0;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: none;
+}
+.main-nav.show {
+    display: block;
+}
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.main-nav ul li {
+    margin: 0 15px;
+}
+.main-nav ul li a {
+    color: var(--color-header-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.main-nav ul li a:hover {
+    color: var(--color-link);
+}
+
+/* Transiciones para botones */
+.nav-btn,
+.add-to-cart,
+.btn,
+.sign-in,
+.sign-up,
+.menu-btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.nav-btn:hover,
+.add-to-cart:hover,
+.btn:hover,
+.sign-in:hover,
+.sign-up:hover,
+.menu-btn:hover {
+    transform: scale(1.05);
+}
 
 .add-to-cart {
-    background-color: var(--color-btn-bg); /* Botón con el color azul */
+    background-color: var(--color-btn-bg);
     color: white;
     margin: 1rem 0 0.6rem;
     padding: 8px;
@@ -290,21 +319,20 @@ header h1 {
     font-size: 0.9rem;
     transition: background-color 0.3s;
 }
-
 .add-to-cart:hover {
-    background-color: var(--color-btn-bg-hover); /* Efecto de hover */
+    background-color: var(--color-btn-bg-hover);
 }
 
-/* Estilo de los desplegables */
+/* ===================== */
+/* Desplegables */
+/* ===================== */
 .dropdown {
     position: relative;
 }
-
-/* Contenido oculto del desplegable */
 .dropdown ul {
     display: none;
     position: absolute;
-    top: 100%; /* Se alinea justo debajo del elemento padre */
+    top: 100%;
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--color-light-overlay);
@@ -313,35 +341,28 @@ header h1 {
     z-index: 1;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 0;
-    list-style: none; /* Quita los estilos de lista */
-    border-radius: 5px; /* Bordes redondeados */
-    overflow: hidden; /* Evita que sobresalga contenido */
+    list-style: none;
+    border-radius: 5px;
+    overflow: hidden;
 }
-
-/* Mostrar el contenido desplegable al pasar el ratón */
 .dropdown:hover ul {
     display: block;
 }
-
-/* Estilos para los enlaces dentro del desplegable */
 .dropdown ul li {
     padding: 10px 16px;
     text-align: center;
 }
-
-/* Estilo de los enlaces dentro del desplegable */
 .dropdown ul li a {
     color: var(--color-texto-claro);
     text-decoration: none;
     display: block;
     transition: background-color 0.3s ease;
 }
-
-/* Estilo de los enlaces dentro del desplegable al pasar el ratón */
 .dropdown ul li a:hover {
     background-color: var(--color-fondo-oscuro);
 }
 
+/* Botón común */
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -350,7 +371,6 @@ header h1 {
     text-decoration: none;
     border-radius: 5px;
 }
-
 .btn:hover {
     background-color: var(--color-btn-hover);
 }
@@ -360,39 +380,57 @@ a {
     color: var(--color-header-text);
 }
 
+/* ===================== */
+/* Secciones e inicio */
+/* ===================== */
 .inicio {
     background-color: var(--color-secondary);
     color: var(--color-header-text);
     padding: 100px 20px;
 }
 .inicio .btn {
-    margin-right: 10px;  /* Espacio entre los botones */
+    margin-right: 10px;
 }
-
-
 section {
     padding: 50px 20px;
 }
-
-/* Ajustes generales para h2 y p */
+section h2 {
+    margin-left: 3.6rem !important;
+}
+#contacto h2 {
+    margin-left: 0rem !important;
+}
 h2 {
-    font-size: 3rem; /* Tamaño ajustado para h2 */
+    font-size: 3rem;
 }
-
 p {
-    font-size: 1.2rem; /* Tamaño ajustado para p */
-    margin: 2rem 5rem; /* Espaciado adecuado para p */
-    line-height: 1.8; /* Aumentamos la separación entre líneas */
+    font-size: 1.2rem;
+    margin: 2rem 5rem;
+    line-height: 1.8;
 }
 
+/* Ajustes para títulos de sección para evitar cortes y reducir tamaño */
+.menu-section h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 1rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .menu-section h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ===================== */
+/* Menú */
+/* ===================== */
 #menu {
     position: relative;
     background: url('Images/Restaurante/Restaurante2.jpg') no-repeat center center/cover;
     color: var(--color-header-text);
     padding: 50px 20px;
 }
-
-/* Agregar un fondo oscuro semi-transparente detrás del contenido del menú */
 #menu::before {
     content: "";
     position: absolute;
@@ -403,44 +441,38 @@ p {
     background: var(--color-dark-overlay);
     z-index: 1;
 }
-
-/* Estilo para el contenido del menú (texto y enlaces) */
 #menu > * {
     position: relative;
     z-index: 2;
     text-align: left;
     margin-left: 3rem;
 }
-
 #menu h2 {
     font-size: 3rem;
     margin: 2rem 5rem;
 }
-
 #menu p {
     font-size: 1.2rem;
     margin: 2rem 5rem;
 }
-
 #menu ul {
     margin: 2rem 7rem;
     font-size: 1.1rem;
 }
-
 #menu ul {
     list-style: none;
     padding: 0;
 }
-
 #menu ul li {
     margin: 0.5rem 0;
 }
-
 #menu .btn {
     margin: 2rem;
-
 }
 
+/* ===================== */
+/* Reservas */
+/* ===================== */
 #reservas {
     position: relative;
     background-color: var(--color-secondary);
@@ -449,14 +481,11 @@ p {
     display: flex;
     flex-direction: column;
 }
-
 #reservas h2 {
-    text-align: left; /* Alinea el título a la izquierda */
+    text-align: left;
     font-size: 3rem;
     margin: 2rem 5rem;
 }
-
-
 #reservas p {
     text-align: left;
     font-size: 1.2rem;
@@ -467,7 +496,6 @@ p {
 #reservas .te-esperamos {
     margin-bottom: 2rem;
 }
-
 #reservas .btn {
     padding: 12px 25px;
     font-size: 1rem;
@@ -477,32 +505,30 @@ p {
     display: inline-block;
     margin-top: 20px;
     text-align: center;
-    width: auto;           /* Asegura que el botón ocupe solo el espacio necesario */
-    max-width: 250px;      /* Establece un ancho máximo similar a otros botones */
-    margin-left: auto;     /* Centra el botón dentro del contenedor */
-    margin-right: auto;    /* Centra el botón dentro del contenedor */
+    width: auto;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-
 #reservas .btn:hover {
     background-color: var(--color-btn-hover);
 }
 
+/* ===================== */
+/* Pedidos */
+/* ===================== */
 #pedidos {
     position: relative;
     background: url('Images/Restaurante/Restaurante3.jpg') no-repeat center center/cover;
     color: var(--color-header-text);
     padding: 50px 20px;
 }
-
-#pedidos h2{
+#pedidos h2 {
     margin: 2rem 5rem;
 }
-#pedidos p{
+#pedidos p {
     margin: 2rem 5rem;
 }
-
-/* Agregar un fondo oscuro semi-transparente detrás del contenido de pedidos */
 #pedidos::before {
     content: "";
     position: absolute;
@@ -513,31 +539,33 @@ p {
     background: var(--color-dark-overlay);
     z-index: 1;
 }
-
-/* Estilo para el contenido de pedidos (texto y enlaces) */
 #pedidos > * {
     position: relative;
     z-index: 2;
     text-align: left;
 }
 
+/* ===================== */
+/* Contacto */
+/* ===================== */
 #contacto {
     background-color: var(--color-secondary);
     color: var(--color-header-text);
 }
 
+/* ===================== */
+/* Galería */
+/* ===================== */
 .galeria {
     background-color: var(--color-text-light);
     color: var(--color-text-dark);
     padding: 50px 20px;
 }
-
 .imagenes-galeria {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
-
 .imagenes-galeria img {
     width: 300px;
     height: auto;
@@ -545,63 +573,64 @@ p {
     box-shadow: 0px 4px 8px var(--color-light-overlay);
 }
 
+/* ===================== */
+/* Mapa */
+/* ===================== */
 .mapa-contenedor {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
-
 .mapa-contenedor iframe {
     width: 90%;
-    max-width: 800px; /* Para que no sea demasiado ancho en pantallas grandes */
+    max-width: 800px;
     height: 400px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px var(--color-light-overlay);
 }
 
-
+/* ===================== */
+/* Footer */
+/* ===================== */
 footer {
     background: var(--color-footer-background);
     color: var(--color-header-text);
-
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
-
 .footer-logo img {
-    height: 3rem; /* Ajusta el tamaño de la imagen */
+    height: 3rem;
     border-radius: 50%;
 }
 
-/* Estilos actualizados para el modal */
+/* ===================== */
+/* Modal */
+/* ===================== */
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
-    z-index: 2000; /* Por encima del navbar */
+    z-index: 2000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
 }
-
-.modal h2{
+.modal h2 {
     text-align: center;
     font-size: 2rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.modal label{
+.modal label {
     font-size: 1rem;
 }
-
-/* Contenedor del modal */
 .modal-content {
     background: white;
     padding: 25px;
@@ -611,22 +640,17 @@ footer {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     text-align: left;
     position: relative;
-    z-index: 2100; /* Asegura que el contenido del modal no quede oculto */
+    z-index: 2100;
 }
-
-
-/* Estilos de los inputs */
 .modal-content input {
     width: 94%;
     padding: 8px;
-    margin: 0.3rem 0 1.3rem 0; /* Aumenta el espacio entre los inputs */
+    margin: 0.3rem 0 1.3rem 0;
     border: 1px solid #ccc;
     border-radius: 5px;
     display: block;
     text-align: left;
 }
-
-/* Botón de cierre */
 .close {
     position: absolute;
     top: 10px;
@@ -635,10 +659,8 @@ footer {
     cursor: pointer;
     color: #333;
 }
-
-/* Botón de registro */
 .modal-content button {
-    background-color: #d9232e; /* Rojo estilo japonés */
+    background-color: #d9232e;
     color: white;
     border: none;
     padding: 12px;
@@ -649,13 +671,13 @@ footer {
     margin-top: 10px;
     font-weight: bold;
 }
-
 .modal-content button:hover {
     background-color: #a71b22;
 }
 
-
-
+/* ===================== */
+/* Header Menu */
+/* ===================== */
 .header-menu {
     display: flex;
     flex-direction: row;
@@ -667,8 +689,6 @@ footer {
     text-align: left;
     position: relative;
 }
-
-/* Agregar un fondo oscuro semi-transparente detrás del h1 */
 .header-menu::before {
     content: "";
     position: absolute;
@@ -679,8 +699,6 @@ footer {
     background: rgba(0, 0, 0, 0.6);
     z-index: 1;
 }
-
-/* Hacer el texto más legible con sombra */
 .header-menu h1 {
     font-size: 6rem;
     margin: 0;
@@ -689,14 +707,11 @@ footer {
     z-index: 2;
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
 }
-
-/* Estilo para el logo */
 .logo-menu {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-
 .logo-menu img {
     height: 6rem;
     border-radius: 50%;
@@ -704,74 +719,286 @@ footer {
     position: relative;
     z-index: 2;
 }
-
 .menu-section {
     margin: 0rem 10rem 0rem 10rem;
-    padding:0rem 0rem 6rem 0rem;
+    padding: 0rem 0rem 6rem 0rem;
     border-bottom: solid 2px var(--color-border);
 }
-
-#vinos{
+#vinos {
     border-bottom: none;
 }
-
 .menu-table {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas por fila */
-    gap: 15px; /* Espacio entre los platos */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
-
 .menu-row {
     display: flex;
     flex-wrap: wrap;
 }
-
 .menu-item {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra horizontalmente */
+    align-items: center;
     justify-content: space-between;
     text-align: center;
     padding: 15px;
     background-color: #fff;
-    border: 1px solid var(--color-border);  
+    border: 1px solid var(--color-border);
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     height: auto;
     font-size: 0.9rem;
 }
-
 .menu-item-img {
-    width: auto; /* Mantiene la proporción de la imagen */
-    max-width: 150px; /* Limita el tamaño máximo */
-    height: 100px; /* Tamaño fijo para todas las imágenes */
-    margin-bottom: 10px; /* Espacio debajo de la imagen */
-    border-radius: 5px; /* Bordes redondeados */
+    width: auto;
+    max-width: 150px;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     display: block;
-    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    object-fit: cover;
 }
-
 .menu-item .menu-item-img:empty {
     display: block;
 }
-
 .menu-item h3 {
     font-size: 1rem;
     margin: 5px 0;
 }
-
 .menu-item p {
     font-size: 0.85rem;
     margin: 5px 0;
 }
-
 .menu-item span {
     font-size: 0.9rem;
     margin: 5px 0;
     font-weight: bold;
 }
-
 a {
     text-decoration: none;
     color: var(--color-header-text);
+}
+
+@media (min-width: 769px) {
+    /* Navbar superior original */
+    .top-navbar {
+        display: flex;
+        justify-content: space-between; /* Espacio entre el logo y los enlaces */
+        align-items: center;
+        background: var(--color-footer-background);
+        color: var(--color-header-text);
+        position: relative; /* Se elimina el position: fixed para este ejemplo original si lo prefieres */
+        z-index: 1100;
+        padding: 8px 20px;
+        backdrop-filter: blur(10px);
+        font-size: 14px;
+        flex-wrap: nowrap;
+    }
+
+    /* Contenedor para centrar el logo, como se tenía originalmente */
+    .top-navbar .logo-center {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        margin-left: 16rem; /* Valor original: aseguran que el logo quede centrado sin sobreponerse a los enlaces */
+        z-index: 2;
+        text-align: center;
+    }
+
+    /* Enlaces del navbar, alineados a la derecha */
+    .top-nav-links {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        margin: 0;
+    }
+
+    /* Contenedor de botones de bienvenida (signin, signup y carrito), con separación estrecha */
+    .btn-inicio {
+        display: flex;
+        gap: 1px;
+        border-radius: 20px;
+        background-color: var(--color-footer-background);
+        transition: background-color 0.6s ease;
+    }
+
+    /* Navbar principal (menú desplegable) original */
+    .main-nav {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background: var(--color-nav-background);
+        padding: 1rem 0;
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        display: none; /* Se muestra al activar el menú */
+    }
+    .main-nav.show {
+        display: block;
+    }
+    .main-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end; /* Alinea los enlaces a la derecha */
+    }
+    .main-nav ul li {
+        margin: 0 15px;
+    }
+    .main-nav ul li a {
+        color: var(--color-header-text);
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .main-nav ul li a:hover {
+        color: var(--color-link);
+    }
+}
+
+/* ===================== */
+/* Media Queries para pantallas pequeñas */
+/* ===================== */
+@media (max-width: 480px) {
+    header {
+        padding: 15vh 5px;
+    }
+    header h1 {
+        font-size: 3rem;
+        margin: 0;
+        padding: 0 1rem;
+    }
+    .logo img,
+    .logo-menu img {
+        height: 8rem;
+        padding: 0 2rem;
+        z-index: 1;
+    }
+}
+@media (max-width: 320px) {
+    header {
+        padding: 12vh 5px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+        padding: 0 1rem;
+    }
+    .logo img,
+    .logo-menu img {
+        height: 7rem;
+        padding: 0 1rem;
+    }
+}
+
+/* ===================== */
+/* Media Queries adicionales para el Nav */
+/* ===================== */
+/* Para tamaños medianos */
+@media (max-width: 768px) {
+    .top-navbar {
+       padding: 8px 10px;
+    }
+    .top-nav-links {
+       gap: 8px;
+    }
+    .main-nav ul {
+        margin-top: 3rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .main-nav ul li {
+        padding: 0.6rem;
+    }
+    
+    /* Grilla de tarjetas en 1 columna */
+    .menu-table {
+        grid-template-columns: 1fr !important;
+        gap: 10px;
+    }
+    .menu-section {
+        margin: 0 2rem 2rem 2rem;
+        padding-bottom: 3rem;
+    }
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 480px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+    header h1 {
+        margin-top: 1rem;
+        font-size: 3.5rem; /* Ajusta este valor según lo necesites */
+    }
+    header img {
+        margin-top: 2rem;
+        margin-left: 5rem;
+    }
+    .header-menu {
+        display: block;
+        text-align: center;
+    }
+    .header-menu h1 {
+        font-size: 3.5rem; /* Ajusta este valor según lo necesites */
+    }
+    .header-menu img {
+        margin-top: 2rem;
+        margin-left: 5rem;
+    }
+    .top-navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .top-nav-links {
+        justify-content: center;
+        margin-top: 5px;
+    }
+    .main-nav ul {
+        margin-top: 5rem;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .main-nav ul li {
+        padding: 0.6rem;
+    }
+    .secondary {
+        margin-top: 1rem;
+    }
+    /* Para el modal de la cesta: se reorganiza cada item en columna */
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    /* Se fuerza que el contenedor de los botones (último div dentro de .cart-item) ocupe todo el ancho y se centre */
+    .cart-item > div:last-child {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    #cartModal .modal-content {
+        width: 280px; /* Ancho fijo */
+        max-height: 80vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        margin: 0 auto;
+        margin-right: 1.6rem;
+        padding: 15px;
+    }
+
+    /* Centrar el botón del modal */
+    .modal-content button {
+        margin: 10px 20px;
+        display: block;
+    }
+    
+    /* Aseguramos que el botón de pagar (checkout) esté centrado */
+    #checkoutBtn {
+        display: block;
+        margin: 20px 0 0 0; /* margen superior y a la izquierda */
+        text-align: left;
+    }
 }
